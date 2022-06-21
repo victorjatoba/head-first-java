@@ -2,9 +2,10 @@ public class Honey {
 
   public static void main(String[] args) {
     Honey honeyPot = new Honey();
-    Honey[] ha = { honeyPot, honeyPot, honeyPot, honeyPot };
-    System.out.println(ha[0]);
-    System.out.println(ha[1]);
+    Honey[] ha = { honeyPot, honeyPot, honeyPot, new Honey() };
+    for (Honey h : ha) {
+      System.out.println(h);
+    }
     Bees bees = new Bees();
     bees.beeHoney = ha;
     Bear[] bears = new Bear[5];
@@ -18,5 +19,11 @@ public class Honey {
     raccoon.rh = honeyPot;
     raccoon.rk = kit;
     kit = null;
+  }
+
+  @Override
+  public String toString() {
+    String classId = super.toString();
+    return "Honey Object id: " + classId;
   }
 }
