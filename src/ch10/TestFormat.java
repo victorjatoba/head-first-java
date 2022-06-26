@@ -19,6 +19,13 @@ public class TestFormat {
     );
     System.out.println(sChallenge);
 
+    String sChallenge2 = String.format(
+      "I have %.2f, bugs to fix. But only %d, to concern.",
+      9239923.93492,
+      2
+    );
+    System.out.println(sChallenge2);
+
     boolean myBillionBool = true;
     String s3 = String.format("%,d", myBillionBool); // it doesn't work
     System.out.println(s3);
