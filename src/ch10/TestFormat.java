@@ -9,8 +9,8 @@ public class TestFormat {
     String s2 = String.format("%,d", myBillionInt);
     System.out.println(s2);
 
-    double myDouble = 129939474.9399;
-    String sDouble = String.format("%,.2f", myDouble);
+    double myDouble = 129939474.939;
+    String sDouble = String.format("%,.4f", myDouble);
     System.out.println(sDouble);
 
     String sChallenge = String.format(
