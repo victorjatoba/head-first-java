@@ -1,5 +1,7 @@
 public class MathUse {
 
+  private Number numberOne;
+
   private MathUse() {}
 
   public static void main(String[] args) {
