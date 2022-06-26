@@ -1,3 +1,4 @@
+
 class StaticSuper {
   static {
     System.out.println("super static block");
@@ -14,7 +15,8 @@ public class StaticTests extends StaticSuper {
 
   static {
     rand = (int) (Math.random() * 6);
-    System.out.println("Static block " + rand);
+    System.out.format("%d\n", rand);
+    System.out.println("Static block " +  rand);
   }
 
   StaticTests() {
