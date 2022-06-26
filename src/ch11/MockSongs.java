@@ -8,7 +8,7 @@ public class MockSongs {
     setSongs();
     System.out.println("Before");
     System.out.println(songs);
-    // Collections.sort(songs);
+    Collections.sort(songs);
     System.out.println("\nAfter");
     System.out.println(songs);
   }

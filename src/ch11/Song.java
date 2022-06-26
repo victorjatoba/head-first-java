@@ -1,4 +1,6 @@
-public class Song {
+import java.util.*;
+
+public class Song implements Comparable {
 
   private String title;
   private String artist;
@@ -16,8 +18,13 @@ public class Song {
     return title;
   }
 
-  @Override
   public String toString() {
     return title;
+  }
+
+  @Override
+  public int compareTo(Object o) {
+    Song other = (Song) o;
+    return title.compareTo(other.getTitle());
   }
 }
