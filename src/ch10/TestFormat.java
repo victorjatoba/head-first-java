@@ -4,7 +4,7 @@ public class TestFormat {
     long myBillion = 1_000_000_000;
     String s = String.format("%,d", myBillion);
     System.out.println(s);
-    int myBillionInt = 129;
+    int myBillionInt = 129939474;
 
     String s2 = String.format("%,d", myBillionInt);
     System.out.println(s2);
