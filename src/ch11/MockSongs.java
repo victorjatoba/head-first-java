@@ -12,7 +12,7 @@ public class MockSongs {
     System.out.println("\nSort by title");
     System.out.println(songs);
     ArtistCompare artistCompare = new ArtistCompare();
-    Collections.sort(songs, artistCompare);
+    songs.sort(artistCompare);
     System.out.println("\nSort by artist");
     System.out.println(songs);
   }
