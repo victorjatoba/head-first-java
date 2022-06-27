@@ -6,11 +6,21 @@ public class MapTest {
   public static void main(String[] args) {
     Map<String, Integer> rank = getMapNormal();
 
-    Map<String, Integer> rankConvenienceFactoryJava9 = getMapUsingConvenienceFactoryByJava9();
+    Map<String, Integer> rankConvenienceFactory = getMapUsingConvenienceFactoryByJava9();
+
+    Map<String, Integer> rankConvenienceMoreThan10Registers = getMapUsingConvenienceFactoryByJava9MoreThan10Registers();
 
     System.out.println(rank);
-    System.out.println(rankConvenienceFactoryJava9);
+    System.out.println(rankConvenienceFactory);
+    System.out.println(rankConvenienceMoreThan10Registers);
   }
+
+private static Map<String, Integer> getMapUsingConvenienceFactoryByJava9MoreThan10Registers() {
+    return Map.ofEntries(
+      Map.entry("Sena", 10),
+      Map.entry("Barrichello", 2)
+    );
+}
 
   private static Map<String, Integer> getMapUsingConvenienceFactoryByJava9() {
     Map<String, Integer> rankConvenienceFactoryJava9 = Map.of(
