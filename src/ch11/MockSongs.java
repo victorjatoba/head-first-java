@@ -8,12 +8,16 @@ public class MockSongs {
     setSongs();
     System.out.println("Before");
     System.out.println(songs);
+
+    System.out.println("\nSort by title [Collections.sort]");
     Collections.sort(songs);
-    System.out.println("\nSort by title");
     System.out.println(songs);
-    ArtistCompare artistCompare = new ArtistCompare();
-    songs.sort(artistCompare);
-    System.out.println("\nSort by artist");
+
+    songs.sort(
+      (first, second) -> first.getArtist().compareTo(second.getArtist())
+    );
+
+    System.out.println("\nSort by artist [List.sort]");
     System.out.println(songs);
   }
 
