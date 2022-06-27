@@ -23,6 +23,17 @@ public class MockSongs {
     System.out.println("\nUse Set to remove duplicates");
     Set<Song> set = new HashSet<>(songs);
     System.out.println(set);
+
+    System.out.println("\nUse TreeSet to sort");
+    TreeSet<Song> treeSet = new TreeSet<>(
+      (a, b) -> {
+        String songA = (a.getTitle() + a.getArtist());
+        String songB = (b.getTitle() + b.getArtist());
+        return songA.compareTo(songB);
+      }
+    );
+    treeSet.addAll(set);
+    System.out.println(treeSet);
   }
 
   public static List<Song> getSongs() {
