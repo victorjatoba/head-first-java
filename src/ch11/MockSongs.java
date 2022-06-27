@@ -25,7 +25,7 @@ public class MockSongs {
     System.out.println(set);
 
     System.out.println("\nUse TreeSet to sort");
-    TreeSet<Song> treeSet = new TreeSet<>(
+    Set<Song> treeSet = new TreeSet<>(
       (a, b) -> {
         String songA = (a.getTitle() + a.getArtist());
         String songB = (b.getTitle() + b.getArtist());
