@@ -15,19 +15,34 @@ public class MapTest {
     System.out.println(rankConvenienceMoreThan10Registers);
   }
 
-private static Map<String, Integer> getMapUsingConvenienceFactoryByJava9MoreThan10Registers() {
-    return Map.ofEntries(
-      Map.entry("Sena", 10),
-      Map.entry("Barrichello", 2)
-    );
-}
+  private static Map<String, Integer> getMapUsingConvenienceFactoryByJava9MoreThan10Registers() {
+    return Map.ofEntries(Map.entry("Sena", 10), Map.entry("Barrichello", 2));
+  }
 
   private static Map<String, Integer> getMapUsingConvenienceFactoryByJava9() {
     Map<String, Integer> rankConvenienceFactoryJava9 = Map.of(
-      "Sena",
-      10,
-      "Barrichello",
+      "1",
+      2,
+      "2",
+      2,
+      "3",
+      2,
+      "4",
+      2,
+      "5",
+      2,
+      "6",
+      2,
+      "7",
+      2,
+      "8",
+      2,
+      "9",
+      2,
+      "10",
       2
+      //   "11", //not allowed. Use Map.Entries
+      //   2
     );
     return rankConvenienceFactoryJava9;
   }
