@@ -16,7 +16,8 @@ public class Generics {
     // takeObjects(new ArrayList<Dog>());
     takeObjects(new ArrayList<>());
     takeObjects(new ArrayList<Object>());
-    };
+    List<Object> objects = new ArrayList<>();
+    takeObjects(objects);
   }
 
   private static void takeDogs(List<Dog> dogs) {
