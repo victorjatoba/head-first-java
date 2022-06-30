@@ -7,7 +7,7 @@ public class MixForLoops {
     List<Integer> nums = List.of(7, 6, 1, 2, 3, 4, 5);
     List<Integer> firstSorted = nums
       .stream()
-      .sorted()
+      .sorted((n1, n2) -> n2.compareTo(n1))
       .limit(3)
       .collect(Collectors.toList());
 
