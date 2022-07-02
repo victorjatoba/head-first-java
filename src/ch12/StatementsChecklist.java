@@ -1,4 +1,3 @@
-import java.security.Principal;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -15,6 +14,7 @@ public class StatementsChecklist {
     Supplier<String> s = () -> "Some string";
     r.run();
     c.accept(new Rabit(2));
+    System.out.println(f.apply("abs"));
     System.out.println(s.get());
 
     CompleteName<User> completenameName = u ->
