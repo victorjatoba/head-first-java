@@ -5,13 +5,29 @@ public class Songs {
 
   public static void main(String[] args) {
     List<Song> songs = Songs.getSongs();
+    System.out.println("Rock songs:");
     getRockSongs(songs).forEach(song -> print(song));
+    System.out.println("All distinct genres:");
+    getDistinctGenres(songs).forEach(genre -> System.out.println(" " + genre));
+  }
+
+  private static List<String> getDistinctGenres(List<Song> songs) {
+    return songs
+      .stream()
+      .map(song -> song.getGenre())
+      .distinct()
+      .collect(Collectors.toList());
   }
 
   private static void print(Song song) {
-    System.out.println(song.getTitle() + " " + song.getArtist());
+    System.out.println(" " + song.getTitle() + " " + song.getArtist());
   }
 
+  /**
+   * Lou's exercise #02
+   * @param songs
+   * @return
+   */
   private static List<Song> getRockSongs(List<Song> songs) {
     List<Song> rockSongs = songs
       .stream()
