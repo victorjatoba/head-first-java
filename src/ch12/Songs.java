@@ -1,18 +1,23 @@
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Songs {
 
   public static void main(String[] args) {
     List<Song> songs = Songs.getSongs();
+    getRockSongs(songs).forEach(song -> print(song));
+  }
+
+  private static void print(Song song) {
+    System.out.println(song.getTitle() + " " + song.getArtist());
+  }
+
+  private static List<Song> getRockSongs(List<Song> songs) {
     List<Song> rockSongs = songs
       .stream()
       .filter(song -> song.getGenre().equals("Rock"))
       .collect(Collectors.toList());
-    rockSongs.forEach(
-      song -> System.out.println(song.getTitle() + " " + song.getArtist())
-    );
+    return rockSongs;
   }
 
   static List<Song> getSongs() {
