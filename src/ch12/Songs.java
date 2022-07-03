@@ -9,6 +9,18 @@ public class Songs {
     getRockSongs(songs).forEach(song -> print(song));
     System.out.println("All distinct genres:");
     getDistinctGenres(songs).forEach(genre -> System.out.println(" " + genre));
+    System.out.println("Ordered by year:");
+    getOrderedSongsByYear(songs)
+      .forEach(
+        s -> System.out.println(" " + s.toString() + " (" + s.getYear() + ")")
+      );
+  }
+
+  private static List<Song> getOrderedSongsByYear(List<Song> songs) {
+    return songs
+      .stream()
+      .sorted((a, b) -> a.getYear() - b.getYear())
+      .collect(Collectors.toList());
   }
 
   private static List<String> getDistinctGenres(List<Song> songs) {
@@ -90,5 +102,10 @@ class Song {
 
   public int getTimesPlayed() {
     return timesPlayed;
+  }
+
+  @Override
+  public String toString() {
+    return getTitle() + " by " + getArtist();
   }
 }
