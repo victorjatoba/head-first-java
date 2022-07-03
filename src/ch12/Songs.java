@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +20,8 @@ public class Songs {
   private static List<Song> getOrderedSongsByYear(List<Song> songs) {
     return songs
       .stream()
-      .sorted((a, b) -> a.getYear() - b.getYear())
+      // .sorted((a, b) -> a.getYear() - b.getYear())
+      .sorted(Comparator.comparingInt(Song::getYear))
       .collect(Collectors.toList());
   }
 
@@ -53,9 +55,9 @@ public class Songs {
       new Song("Smooth", "Santana", "Latin", 1999, 244),
       new Song("Immigrant", "Led Zeppelin", "Rock", 1970, 484),
       new Song("Pasos de cero", "Pablo Alborán", "Latin", 2014, 117),
-      new Song("1", "Artist 1", "Latin", 2014, 117),
-      new Song("2", "Artist 2", "Latin", 2014, 117),
-      new Song("2", "Artist 3", "Latin", 2014, 117),
+      new Song("1", "Artist 1", "Latin", 2011, 117),
+      new Song("2", "Artist 2", "Latin", 2000, 117),
+      new Song("2", "Artist 3", "Latin", 2009, 117),
       new Song("We'll rock", "Queen", "Rock", 1992, 321)
     );
   }
